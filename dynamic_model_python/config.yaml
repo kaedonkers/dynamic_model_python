@@ -1,0 +1,9 @@
+simulation_1:
+  n: 100
+  modules:
+    - module_1
+
+module_1:
+  y_0: 0
+  param: 10
+  
