@@ -4,7 +4,7 @@ from dynamic_model.simulator import Simulator
 def launch_simulation(simulation_name, plot=True):
     # Create and initialize simulator object
     sim = Simulator()
-    sim.initialize(simulation_name)
+    sim.initialise(simulation_name)
 
     # Launch the simulation itself
     sim.run_simulation()
