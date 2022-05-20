@@ -38,7 +38,6 @@ class Simulator(object):
         self.n = config["n"]
         self.modules = config["modules"]
 
-
     def initialise(self, instance_name, config_file=None):
         '''
         Initialise the simulation
@@ -51,8 +50,18 @@ class Simulator(object):
         for module in self.modules.keys():
             self.modules[module] = Module().initialise(module, config_file) 
         
-
-
-
-
+    def run_simulation(self):
+        '''
+        Run the simulation
+        '''
+        for i in range(self.n):
+            for module in self.modules.keys():
+                self.modules[module].update_states()
+            self.n += 1
+    
+    def plot_results(self):
+        '''
+        Plot the results of the simulation
+        '''
+        pass
 
